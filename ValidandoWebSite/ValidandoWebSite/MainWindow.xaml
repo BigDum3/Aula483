@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:ValidandoWebSite"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
-        <TextBox Name="txtUrl" HorizontalAlignment="Left" Height="24" Margin="10,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" TextChanged="TxtUrl_TextChanged" Text="TextBox"/>
+    <Grid HorizontalAlignment="Left" Width="792" Height="419" VerticalAlignment="Top">
+        <TextBox Name="txtUrl" HorizontalAlignment="Left" Height="24" Margin="10,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" TextChanged="TxtUrl_TextChanged"/>
         <Button Click="Button_Click" Content="Não Clique Aqui" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Width="772" Height="72" RenderTransformOrigin="0.5,0.583"/>
-        <TextBox Name="txtStatusReport" HorizontalAlignment="Left" Height="278" Margin="10,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name="txtStatusReport" HorizontalAlignment="Left" Height="278" Margin="10,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" />
     </Grid>
 </Window>
