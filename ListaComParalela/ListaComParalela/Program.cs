@@ -20,9 +20,21 @@ namespace ListaComParalela
             Console.ReadKey();
         }
 
+        public static void CarregaListaParallel()
+        {
+            Parallel.For(0,62000, i =>
+            {
+                ListaDeItens.Add(new ParalleListTeste()
+                {
+                    Numero = i
+                });
+
+            });
+        }
+
         public static void CarregaLista()
         {
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 62000; i++)
             {
                 ListaDeItens.Add(new ParalleListTeste()
                 {
