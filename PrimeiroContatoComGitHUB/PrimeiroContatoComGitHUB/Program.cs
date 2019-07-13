@@ -11,8 +11,8 @@ namespace PrimeiroContatoComGitHUB
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Hello Git");
-            //Remover a linha superior
         }
     }
 }
