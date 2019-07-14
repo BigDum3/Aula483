@@ -40,12 +40,16 @@ namespace ValidandoWebSite
                 {
                     try
                     {
+                        //CRIA UMA REQUISICAO DENTRO DO NOSSO METODO BOTAO, IGUAL A UM NAVEGADOR FAZ QUANDO DIGITAMOS UMA URL
+
                         HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                        //ESPERA TRAZER OS ARQUIVOS DA NUVEM "HEADERS" INDICANDO O STATUS CODE DO SITE
                         HttpWebResponse response = await Task<WebResponse>.Factory.FromAsync(
                             request.BeginGetResponse,
                             request.EndGetResponse,
                             request) as HttpWebResponse;
 
+                        // ADICIONA NA NOSSA LISTA AS INFORMACOES
                         list.Add(new ListaRequisicoes()
                         {
                             Url = item,
@@ -86,6 +90,7 @@ namespace ValidandoWebSite
 
         public class ListaRequisicoes
         {
+            //URL DO SITE QUE QUEREMOS VERIFICAR SE ESTA ONLINE
             public string Url { get; set; } = string.Empty;
             public string Status { get; set; } = string.Empty;
         }
