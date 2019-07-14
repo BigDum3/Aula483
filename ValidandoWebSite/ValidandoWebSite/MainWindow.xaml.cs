@@ -54,7 +54,12 @@ namespace ValidandoWebSite
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        list.Add(new ListaRequisicoes()
+                        {
+                            Url = item,
+                            Status = "Erro"
+                        });
+                        
                     }
                 }
             }
@@ -66,7 +71,7 @@ namespace ValidandoWebSite
 
         {
             timer.Tick += new EventHandler(timer_tick);
-            timer.Interval = new TimeSpan(0, 0, 0, 500);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
             timer.Start();
         }
 
