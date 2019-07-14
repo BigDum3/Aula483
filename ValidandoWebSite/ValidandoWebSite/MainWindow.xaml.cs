@@ -74,16 +74,22 @@ namespace ValidandoWebSite
         private void Window_Loaded(object sender, RoutedEventArgs e)
 
         {
+            //SETAMOS O EVENTO TICK DO TIMER QUE E EXECUTADO EM UM TEMPO DETERMINADO COM O EVENTO QUE CONTEM NOSSAS OPERACOES
             timer.Tick += new EventHandler(timer_tick);
+            //AQUI DEFINIMOS O CLICK DE EXECUCAO QUE NOSSO TIMER IRA FAZER EM UM LOOP ATE QUE EU FALE PARA ELE PARAR 
+            // OU A APLICACAO SEJA FINALIZADA
             timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
+            //AQUI NESTE PONTO INDICO QUE O TIMER JA PODE EXECUTAR COM A THREAD PRINCIPAL
             timer.Start();
         }
 
         private void timer_tick(object sender, EventArgs e)
         {
+            //AQUI EU LIMPO TODA VEZ QUE ELE ENTRAR NO METODO O QUE JA FOI ESCRITO NA AREA DE TEXTO
             txtStatusReport.Clear();
+            //PERCORRO MINHA LISTA DE SITES JA ADICIONADOS PARA MOSTRAR
             foreach (ListaRequisicoes item in list)
-            {
+            {//APRESENTO AS INFORMACOES DE FORMA FORMATADA
                 txtStatusReport.AppendText($"Url: {item.Url} \r\nStatus Code: {item.Status}");
             }
         }
